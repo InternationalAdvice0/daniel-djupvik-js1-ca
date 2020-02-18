@@ -21,7 +21,7 @@ fetch(url)
   })
   .catch(function() {
     const error = "error.html";
-    //document.location.href = error;
+    document.location.href = error;
   });
 
 const detailsContainer = document.querySelector(".detail-container");
