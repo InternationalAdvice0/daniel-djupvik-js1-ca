@@ -26,7 +26,7 @@ function createHTML(json) {
     html += `
     <div class="col-sm-6 col-md-4 col-lg-3">                
       <div class="card">    
-          <img class="image" src="${APIResult[index].image}" alt="Character Name">
+          <img class="image" src="${APIResult[index].image}" alt="${APIResult[index].name}">
           <div class="details">
               <h4 class="name">${APIResult[index].name}</h4>
               <p>Type: ${typeValue}</p>    
