@@ -19,29 +19,38 @@ formElem.addEventListener("submit", function(event) {
   if (validateNotEmpty(firstNameValue) === false) {
     invalidForm[0].style.display = "block";
     isValid = false;
+  } else {
+    invalidForm[0].style.display = "none";
   }
 
   if (validateNotEmpty(lastNameValue) === false) {
     invalidForm[1].style.display = "block";
     isValid = false;
+  } else {
+    invalidForm[1].style.display = "none";
   }
 
   if (validateEmail(emailValue) === false) {
     invalidForm[2].style.display = "block";
-
     isValid = false;
+  } else {
+    invalidForm[2].style.display = "none";
   }
 
   if (validateNotEmpty(emailValue) === false) {
     invalidForm[3].style.display = "block";
     isValid = false;
+  } else {
+    invalidForm[3].style.display = "none";
   }
 
   if (validateLength(messageValue)) {
     invalidForm[4].style.display = "block";
-
     isValid = false;
+  } else {
+    invalidForm[4].style.display = "none";
   }
+
   for (let index = 0; index < invalidForm.length; index++) {
     if (isValid === true) {
       validForm.style.display = "block";
@@ -60,6 +69,7 @@ function validateLength(value) {
     return false;
   }
 }
+
 function validateNotEmpty(value) {
   trimmedValue = value.trim();
 
