@@ -19,7 +19,7 @@ fetch(baseUrl)
   })
   .catch(function() {
     let error = "error.html";
-    document.location.href = error;
+    //document.location.href = error;
   });
 
 function createHTML(json) {

@@ -21,7 +21,7 @@ fetch(url)
   })
   .catch(function() {
     const error = "error.html";
-    document.location.href = error;
+    //document.location.href = error;
   });
 
 const detailsContainer = document.querySelector(".detail-container");
@@ -37,6 +37,9 @@ function createDetails(API) {
   const status = document.getElementById("status");
   status.innerText = API.status;
 
+  const gender = document.getElementById("gender");
+  gender.innerText = API.gender;
+
   const species = document.getElementById("species");
   species.innerText = API.species;
 
@@ -45,6 +48,12 @@ function createDetails(API) {
 
   const location = document.getElementById("location");
   location.innerText = API.location.name;
+
+  const episode = document.getElementById("episode");
+  episode.innerText = API.episode.length;
+
+  const episodeList = document.querySelector(".episodeList");
+  episodeList.href = `episodes.html?id=${API.id}`;
 
   const loader = document.querySelector(".loader");
   loader.classList.add("hidden");
