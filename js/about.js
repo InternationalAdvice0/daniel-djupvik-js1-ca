@@ -7,7 +7,7 @@ function replaceWords() {
   heading.innerText = replaceHeading;
 
   const paragraph = document.getElementsByTagName("p");
-  for (let index = 0; index < paragraph.length; index++) {
+  for (let index = 0; index <= 2; index++) {
     const paragraphText = paragraph[index].innerText;
 
     const replaceParagraph = paragraphText
